@@ -2,8 +2,8 @@
 # -*- ENCODING: UTF-8 -*-
 
 # Actualizo
-sudo apt-get update -y
-sudo apt-get upgrade -y
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
 
 # Instalo herramientas de red
 sudo apt install net-tools -y
@@ -18,3 +18,6 @@ sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/re
 sudo apt-get install webmin -y
 # Instalo Apache2
 sudo apt install apache2 -y
+
+# Instalo OpenSSH
+sudo apt install openssh-server -y

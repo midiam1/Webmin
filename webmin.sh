@@ -29,5 +29,5 @@ sudo apt install apache2 -y
     sudo ufw allow OpenSSH && clear
 
 # Activo el firewall
-    sudo ufw enable && ufw status
+    sudo ufw enable && sudo ufw status
     

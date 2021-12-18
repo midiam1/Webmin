@@ -19,5 +19,11 @@ sudo apt-get install webmin -y
 # Instalo Apache2
 sudo apt install apache2 -y
 
+# Añado Apache a las reglas del firewall
+    sudo ufw allow Apache
+
 # Instalo OpenSSH
-sudo apt install openssh-server -y
+    sudo apt install openssh-server -y
+
+# Añado OpenSSH a la reglas del firewall
+    sudo ufw allow OpenSSH

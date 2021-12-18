@@ -26,4 +26,8 @@ sudo apt install apache2 -y
     sudo apt install openssh-server -y
 
 # Añado OpenSSH a la reglas del firewall
-    sudo ufw allow OpenSSH
+    sudo ufw allow OpenSSH && clear
+
+# Activo el firewall
+    sudo ufw enable && ufw status
+    

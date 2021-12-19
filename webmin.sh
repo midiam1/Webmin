@@ -19,8 +19,11 @@ sudo apt-get install webmin -y
 # Instalo Apache2
 sudo apt install apache2 -y
 
-# Añado Apache a las reglas del firewall
-    sudo ufw allow Apache
+# Creo un sitio web por defecto
+    sudo mkdir /var/www/laberin.to
+    sudo chown -R $USER:$USER /var/www/laberin.to
+    sudo chmod -R 755 /var/www/laberin.to
+    echo > /var/www/laberin.to/index.html
 
 # Instalo OpenSSH
     sudo apt install openssh-server -y

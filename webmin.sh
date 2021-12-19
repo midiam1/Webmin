@@ -67,4 +67,11 @@ sudo apt install apache2 -y
 
 # Activo el firewall
     sudo ufw enable && sudo ufw status
+
+# Agrego el repositorio para descargar Certbot
+    sudo add-apt-repository ppa:certbot/certbot -y
+
+# Instalo el paquete para Apache
+    sudo apt install python-certbot-apache -y
+
     

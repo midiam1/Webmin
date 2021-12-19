@@ -25,8 +25,14 @@ sudo apt install apache2 -y
 # Instalo OpenSSH
     sudo apt install openssh-server -y
 
+# Añado Webmin a la reglas del firewall
+    sudo ufw allow webmin && clear
+
 # Añado OpenSSH a la reglas del firewall
     sudo ufw allow OpenSSH && clear
+
+# Añado Apache Full a la reglas del firewall
+    sudo ufw allow 'Apache Full' && clear
 
 # Activo el firewall
     sudo ufw enable && sudo ufw status

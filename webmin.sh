@@ -31,7 +31,20 @@ sudo apt install apache2 -y
     echo > /var/www/laberin.to/index.html
 
 # Creo y modifico el correspondiente .conf
-    sudo touch /etc/apache2/sites-available/laberin.to.conf
+    touch laberin.to.conf
+
+# Añado lo necesario para la configuración en apache
+    echo <VirtualHost *:80> >> laberin.to.conf
+    echo    ServerAdmin webmaster@localhost >> laberin.to.conf
+    echo    ServerName laberin.to >> laberin.to.conf
+    echo    ServerAlias www.laberin.to >> laberin.to.conf
+    echo    DocumentRoot /var/www/laberin.to laberin.to.conf
+    echo    ErrorLog ${APACHE_LOG_DIR}/error.log laberin.to.conf
+    echo    CustomLog ${APACHE_LOG_DIR}/access.log combined laberin.to.conf
+    echo </VirtualHost> laberin.to.conf
+
+    sudo mv laberin.to.conf /etc/apache2/sites-available
+
 
 # Instalo OpenSSH
     sudo apt install openssh-server -y

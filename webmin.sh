@@ -28,22 +28,29 @@ sudo apt install apache2 -y
     sudo mkdir /var/www/laberin.to
     sudo chown -R $USER:$USER /var/www/laberin.to
     sudo chmod -R 755 /var/www/laberin.to
-    echo > /var/www/laberin.to/index.html
+    echo > /var/www/laberin.to/index.php
+    echo '<h1>It work !</h1>' >> /var/www/laberin.to/index.php
+    echo '<?php'  >> /var/www/laberin.to/index.php
+    echo 'echo php_uname();' >> /var/www/laberin.to/index.php
+    echo 'echo PHP_OS;'  >> /var/www/laberin.to/index.php
 
 # Creo y modifico el correspondiente .conf
     touch laberin.to.conf
 
 # Añado lo necesario para la configuración en apache
-    echo <VirtualHost *:80> >> laberin.to.conf
-    echo    ServerAdmin webmaster@localhost >> laberin.to.conf
-    echo    ServerName laberin.to >> laberin.to.conf
-    echo    ServerAlias www.laberin.to >> laberin.to.conf
-    echo    DocumentRoot /var/www/laberin.to laberin.to.conf
-    echo    ErrorLog ${APACHE_LOG_DIR}/error.log laberin.to.conf
-    echo    CustomLog ${APACHE_LOG_DIR}/access.log combined laberin.to.conf
-    echo </VirtualHost> laberin.to.conf
+    echo '<VirtualHost *:80> >> laberin.to.conf
+    echo '   ServerAdmin webmaster@localhost' >> laberin.to.conf
+    echo '   ServerName laberin.to' >> laberin.to.conf
+    echo '   ServerAlias www.laberin.to' >> laberin.to.conf
+    echo '   DocumentRoot /var/www/laberin.to' >> laberin.to.conf
+    echo '   ErrorLog ${APACHE_LOG_DIR}/error.log' >> laberin.to.conf
+    echo '   CustomLog ${APACHE_LOG_DIR}/access.log combined' >> laberin.to.conf
+    echo '</VirtualHost>' >> laberin.to.conf
 
     sudo mv laberin.to.conf /etc/apache2/sites-available
+    sudo a2ensite laberin.to.conf
+    sudo systemctl reload apache2
+    sudo a2dissite 000-default.conf
 
 
 # Instalo OpenSSH

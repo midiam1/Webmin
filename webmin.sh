@@ -31,7 +31,7 @@ sudo apt install apache2 -y
     echo > /var/www/laberin.to/index.html
 
 # Creo y modifico el correspondiente .conf
-    sudo echo > /etc/apache2/sites-available/laberin.to.conf
+    sudo touch /etc/apache2/sites-available/laberin.to.conf
 
 # Instalo OpenSSH
     sudo apt install openssh-server -y

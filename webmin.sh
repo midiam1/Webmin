@@ -38,7 +38,7 @@ sudo apt install apache2 -y
     touch laberin.to.conf
 
 # Añado lo necesario para la configuración en apache
-    echo '<VirtualHost *:80> >> laberin.to.conf
+    echo '<VirtualHost *:80>' >> laberin.to.conf
     echo '   ServerAdmin webmaster@localhost' >> laberin.to.conf
     echo '   ServerName laberin.to' >> laberin.to.conf
     echo '   ServerAlias www.laberin.to' >> laberin.to.conf
@@ -49,8 +49,8 @@ sudo apt install apache2 -y
 
     sudo mv laberin.to.conf /etc/apache2/sites-available
     sudo a2ensite laberin.to.conf
-    sudo systemctl reload apache2
     sudo a2dissite 000-default.conf
+    sudo systemctl reload apache2
 
 
 # Instalo OpenSSH

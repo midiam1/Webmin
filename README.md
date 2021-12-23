@@ -1,6 +1,6 @@
  <table width="100%" border="0" cellpadding="4" cellspacing="4">
   <tr>
-    <td width="25%" rowspan="2"><a href="https://www.webmin.com/" target="_blank"><img src="https://github.com/midiam1/Webmin/blob/main/img/webmin.png" width="90%" height="90%"/></a></td>
+    <td rowspan="2" align="center" valign="middle"><a href="https://www.webmin.com/" target="_blank"><img src="https://github.com/midiam1/Webmin/blob/main/img/webmin.png" width="90%" height="90%"/></a></td>
     <td>#webmin</td>
   </tr>
   <tr>

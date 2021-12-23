@@ -1,6 +1,16 @@
 <img src="https://github.com/midiam1/Webmin/blob/main/img/webmin.png"/>
 <hr/>
-<link href="https://github.com/midiam1/Webmin/blob/main/css/estilos.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+
+.Naranja {
+	color: #FC0;
+	font-weight: bold;
+}
+
+</style>
+
+
 # webmin<p><hr>
  Instalación de <strong><a href="https://www.webmin.com/" title="Ir a ..." target="_blank">webmin</a></strong> en <span class="Naranja">Ubuntu 18</span>.
 <hr/>
